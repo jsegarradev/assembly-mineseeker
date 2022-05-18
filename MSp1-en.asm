@@ -203,7 +203,25 @@ countMinesP1:
    push rbp
    mov  rbp, rsp
    
+   mov eax, 0		; Index
+   mov ebx, 0		; Counter
    
+    for:
+		cmp eax, SIZEMATRIX
+		jl if
+		jmp endFor
+		if:
+			cmp byte[mines+eax], '*'
+			je mineFound
+			jmp endIf
+			mineFound:
+				inc ebx
+			endIf:
+		inc eax
+		jmp for
+		endFor:
+		
+	mov DWORD[numMines],ebx
 			
    mov rsp, rbp
    pop rbp

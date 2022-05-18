@@ -1,0 +1,4 @@
+yasm -f elf64 -g dwarf2 MSp1-en.asm
+ 
+gcc -no-pie -g -o MSp1-en MSp1-en.o MSp1c-en.c
+

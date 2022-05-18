@@ -650,8 +650,8 @@ int main(void){
           clearScreen_C();
           printBoardP1_C();
           //=======================================================
-          //countMinesP1();
-          countMinesP1_C();
+          countMinesP1();
+          //countMinesP1_C();
           //=======================================================
           showMinesP1_C();
           rowScreen = 29;
